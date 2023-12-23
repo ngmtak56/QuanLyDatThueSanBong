@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7604E85-6CC8-4EC4-B585-56E72A80BDC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyDatThueSanBongNhanTao</RootNamespace>
+    <AssemblyName>QuanLyDatThueSanBongNhanTao</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\Database.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\HoaDonDVDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\KhoDAO.cs" />
+    <Compile Include="DAO\KhungGioSanDAO.cs" />
+    <Compile Include="DAO\PhieuDatSanDAO.cs" />
+    <Compile Include="DAO\SanBongDAO.cs" />
+    <Compile Include="DAO\SanNhoDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\ThongKeDAO.cs" />
+    <Compile Include="DTO\HoaDonDV.cs" />
+    <Compile Include="DTO\Kho.cs" />
+    <Compile Include="DTO\SanNho.cs" />
+    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="fDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDichVu.Designer.cs">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\KhungGioSan.cs" />
+    <Compile Include="DTO\PhieuDatSan.cs" />
+    <Compile Include="DTO\SanBong.cs" />
+    <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="fChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChiTietHoaDon.Designer.cs">
+      <DependentUpon>fChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDangKy.Designer.cs">
+      <DependentUpon>fDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDangNhap.Designer.cs">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDatSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDatSan.Designer.cs">
+      <DependentUpon>fDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHoaDon3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHoaDon3.Designer.cs">
+      <DependentUpon>fHoaDon3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHoaDon.Designer.cs">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHome.Designer.cs">
+      <DependentUpon>fHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInHoaDon.Designer.cs">
+      <DependentUpon>fInHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKho.Designer.cs">
+      <DependentUpon>fKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSanBong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSanBong.Designer.cs">
+      <DependentUpon>fSanBong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongKe.Designer.cs">
+      <DependentUpon>fThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTrangChu.Designer.cs">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fDichVu.resx">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChiTietHoaDon.resx">
+      <DependentUpon>fChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDangKy.resx">
+      <DependentUpon>fDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDangNhap.resx">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDatSan.resx">
+      <DependentUpon>fDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHoaDon3.resx">
+      <DependentUpon>fHoaDon3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHoaDon.resx">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHome.resx">
+      <DependentUpon>fHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInHoaDon.resx">
+      <DependentUpon>fInHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKho.resx">
+      <DependentUpon>fKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSanBong.resx">
+      <DependentUpon>fSanBong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongKe.resx">
+      <DependentUpon>fThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTrangChu.resx">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\football_net_ball_sport_goal_game_icon_228588.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\football_net_ball_sport_goal_game_icon_228588 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footbal_net_ball_sport_goal_game_icon_228557.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download premium vector of Aerial view of a soccer field by Aew about football, soccer, football field, soccer field, and stadium 449814.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soccer_Ball_icon-icons.com_76265.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soccer_Ball_icon-icons.com_76265 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_expand_icon_195054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_expand_icon_195054 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_117606.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_111152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_1176061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_1111521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_minimize_icon_195498.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math_times_icon_195340.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_filled_icon_199783.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_icon_187899.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-clear_90704.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-groups-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_earnings_charts_business_profit_money_increase_analysis_analytics_icon_188761.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_earnings_charts_business_profit_money_increase_analysis_analytics_icon_188761 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_earnings_charts_business_profit_money_increase_analysis_analytics_icon_188761 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_earnings_charts_business_profit_money_increase_analysis_analytics_icon_188761 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3986717-ball-field-football-soccer-icon_112966.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_show_filled_icon_201405.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_hide_filled_icon_200618.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_burger_icon_251879.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_icon_251286.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_door_icon_246353.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-full-screen-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-subtract-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-subtract-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stadium-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-new-ticket-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-open-pane-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SOCCER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BALLS _ Football - Marco color roble _ 30x40 _ Passepartout blanco.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SOCCER1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warehouse-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-junk-food-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-football-shirt-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-referee-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-whistle-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stadium-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-64 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warehouse-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-document-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-whistle-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-can-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-can-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-can-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-whistle-64 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-document-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-581.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home of Football.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-next-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-next-50 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-next-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Intro\Ball1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-50 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_earnings_charts_business_profit_money_increase_analysis_analytics_icon_188761 %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_earnings_charts_business_profit_money_increase_analysis_analytics_icon_188761 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BALLS _ Football - Marco color roble _ 30x40 _ Passepartout blanco1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\football %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-debt-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-debt-701.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
